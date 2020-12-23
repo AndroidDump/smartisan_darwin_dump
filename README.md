@@ -1,0 +1,13 @@
+# qssi-user 10 QKQ1.200712.002 1 dev-keys
+- manufacturer: 
+- platform: kona
+- codename: darwin
+- flavor: qssi-user
+- release: 10
+- id: QKQ1.200712.002
+- incremental: 1
+- tags: dev-keys
+- fingerprint: SMARTISAN/aries/aries:10/QKQ1.200712.002/1607439580:user/dev-keys
+- brand: SMARTISAN
+- branch: qssi-user-10-QKQ1.200712.002-1-dev-keys
+- repo: smartisan_darwin_dump
