@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<config version="1">
+    <ActivityName name="com.smartisanos.launcher.PinShortcutActivity"/>
+    <ActivityName name="com.android.launcher3.PinShortcutActivity"/>
+    <ActivityName name="android.accounts.ChooseTypeAndAccountActivity"/>
+    <ActivityName name="android.accounts.ChooseAccountTypeActivity"/>
+</config>

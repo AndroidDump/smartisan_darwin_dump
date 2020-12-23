@@ -1,0 +1,31 @@
+on property:smt.zygote.crash=true
+    setprop smt.zygote.crash false
+    start reboot_logcatcher
+
+on property:smt.log.forcereboot=true
+    start forcereboot_logcatcher
+
+on property:smt.log.forcereboot=false
+    stop forcereboot_logcatcher
+    rm /data/syslog/.forcerebootlog.txt
+
+on property:sys.boot_completed=1 && property:sys.system_server.start_count=1
+    start bootlog
+
+service bootlog /system/bin/performanceadjustor logcatcher boot
+    user system
+    group system
+    oneshot
+    disabled
+
+service reboot_logcatcher /system/bin/performanceadjustor logcatcher
+    user system
+    group system
+    oneshot
+    disabled
+
+service forcereboot_logcatcher /system/bin/performanceadjustor logcatcher force
+    user system
+    group system
+    oneshot
+    disabled

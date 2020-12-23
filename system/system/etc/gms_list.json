@@ -1,0 +1,8 @@
+[
+"com.facebook.katana",  //Facebook
+"com.google.android.gms", //GOOGLE_SERVICES
+"com.google.android.gsf", //GOOGLE_SERVICES
+"com.google.android.gsf.login", //GOOGLE_SERVICES
+"com.google.android.gm", //GMAIL
+"com.twitter.android"  //Twitter
+]

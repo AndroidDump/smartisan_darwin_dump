@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<config version="1">
+    <!--
+    /*********************************************************************
+    *
+    *  value    :   1
+    *  name     :   BgControl
+    *  flag     :   FLAG_BG_CONTROL, FLAG_BG_CONTROL_UNSET
+    *  detail   :   background control
+    *  author   :   qilei
+    *
+    *
+    *  value    :   10
+    *  name     :   HDAccelerated
+    *  flag     :   FLAG_HARDWARE_ACCELERATED
+    *  detail   :   force hardware draws for these apps
+    *  author   :   nietong
+    *
+    *
+    *  value    :   100
+    *  name     :   LaunchBoost
+    *  flag     :   smartisanLaunchBoostValue
+    *  detail   :   boost time(ms) for app cold launch
+    *  author   :   guojian
+    *
+    *
+    *  value    :   1000
+    *  name     :   StartingWindow
+    *  flag     :   smtStartingWindowType
+    *  detail   :   blur starting window display for app
+    *  author   :   nietong
+    *
+    *
+    *  value    :   10000
+    *  name     :   BgControl_36h_not_kill
+    *  flag     :   smartisanBgControlAppAdjLevel
+    *  detail   :   not kill these apps when backend scans after 36 hours
+    *  author   :   nietong
+    *
+    *
+    *  value    :   100000
+    *  name     :   Resident_not_kill
+    *  flag     :   FLAG_CATEGORY_MEM_RESIDENT
+    *  detail   :   1. these are apps which are persist apps that can not be killed anyway(nietong)
+    *               2. not kill certain apps when temperature is high in TNT(hanbingtian)
+    *  author   :   nietong hanbingtian
+    *
+    *
+    *  value    :   1000000
+    *  name     :   doze_kill_app
+    *  flag     :   FLAG_KILL_AT_DOZE
+    *  detail   :   these apps will be killed when device idle
+    *  author   :   wangzhaoliang
+    *
+    *
+    *  value    :   10000000
+    *  name     :   top_app
+    *  flag     :   FLAG_TOP_APP
+    *  detail   :   top apps used for AMS computeOomAdjLocked
+    *  author   :   nietong
+    *
+    *  value    :   100000000
+    *  name     :   clean_app_at_screen_off
+    *  flag     :   FLAG_CLEAN_APP_AT_SCREEN_OFF
+    *  detail   :   clean the app when the screen off
+    *  author   :   nietong
+    *
+    *
+    *  value    :   1000000000
+    *  name     :   stop_startup_app
+    *  flag     :   FLAG_STOP_STARTUP_APP
+    *  detail   :   stop the app startup
+    *  author   :   fukaiqiang
+    *
+    *  value    :   1000000000000
+    *  name     :   force_draw_scrollbar
+    *  flag     :   FORCE_DRAW_SCROLLBAR
+    *  detail   :   force draw scroll bars
+    *  author   :   zhangjinshan
+    *
+    *
+    *  value    :   10000000000000
+    *  name     :   recalculate_layer_type
+    *  flag     :   RECALCULATE_LAYER_TYPE
+    *  detail   :   recalculate layer types
+    *  author   :   zhangjinshan
+    *
+    *
+    *  value    :   100000000000000
+    *  name     :   game_balance
+    *  flag     :   GAME_BALANCE
+    *  detail   :   game balance for apps
+    *  author   :   wangzhengan
+    *
+    *
+    *  value    :   1000000000000000000000
+    *  name     :   uid_group
+    *  flag     :   UID_GROUP_ID
+    *  detail   :   family app uids to a group
+    *  author   :   hanjunshuai
+    *
+    *
+    *  value    :   100000000000000000
+    *  name     :   performance_tool
+    *  flag     :   PERFORMANCE_TOOL
+    *  detail   :   antutu,ludashi performance test tool
+    *  author   :   nietong
+    *
+    *  value    :   1000000000000000000
+    *  name     :   forcestop_restart
+    *  flag     :   PEROPT_FLAG_FORCESTOP_RESTART
+    *  detail   :   prohibit restart after forcestop
+    *  author   :   fukaiqiang
+    *
+    *
+    *  value    :   1000000000000000000000000000
+    *  name     :   primary_prof
+    *  flag     :   PEROPT_FLAG_PRIMARY_PROF
+    *  detail   :   apps that should use dm file
+    *  author   :   zhangjinshan
+    *
+    ************************************************************************/
+    -->
+    <package name="com.quark.browser" value="100" LaunchBoost="400" />
+    <package name="com.xiaomi.smarthome" value="100" LaunchBoost="500" />
+    <package name="com.sohu.inputmethod.sogou" value="100" LaunchBoost="515" />
+    <package name="com.google.android.youtube" value="100" LaunchBoost="562" />
+    <package name="com.ss.android.article.lite" value="100" LaunchBoost="659" />
+    <package name="com.ss.android.ugc.aweme" value="1000000000000000000000000100" LaunchBoost="731" />
+    <package name="com.lemon.lv" value="100" LaunchBoost="925" />
+    <package name="com.tencent.wework" value="100" LaunchBoost="971" />
+    <package name="com.cainiao.wireless" value="100" LaunchBoost="977" />
+    <package name="com.sup.android.superb" value="100" LaunchBoost="985" />
+    <package name="com.tencent.weread" value="100" LaunchBoost="1049" />
+    <package name="com.xingin.xhs" value="100" LaunchBoost="1082" />
+    <package name="com.alibaba.wireless" value="100" LaunchBoost="1425" />
+    <package name="com.alibaba.android.rimet" value="1000000000000000000000000100" LaunchBoost="1441" />
+    <package name="com.ss.android.ugc.aweme.lite" value="1000000000000000000000000100" LaunchBoost="1455" />
+    <package name="com.kuaishou.nebula" value="100" LaunchBoost="1555" />
+    <package name="com.chinamworld.bocmbci" value="100" LaunchBoost="1588" />
+    <package name="com.tencent.weishi" value="100" LaunchBoost="1650" />
+    <package name="com.unionpay" value="100" LaunchBoost="1655" />
+    <package name="com.videogo" value="100" LaunchBoost="1695" />
+    <package name="cn.gov.tax.its" value="100" LaunchBoost="1700" />
+    <package name="com.tencent.gamehelper.smoba" value="100" LaunchBoost="2200" />
+    <package name="com.hpbr.bosszhipin" value="100" LaunchBoost="2363" />
+<!-- automate update:2020080521-->
+    <package name="com.tencent.mobileqqi" value="1000000000000000000000000001"/>
+    <package name="com.tencent.mobileqq" value="1100000000000000000000001111" LaunchBoost="561" StartingWindow="preview"/>
+    <package name="com.tencent.mm" value="1100000000001010000010101101" LaunchBoost="2000" StartingWindow="preview"/>
+    <package name="com.tencent.qq" value="1"/>
+    <package name="com.tencent.qqlite" value="1"/>
+    <package name="com.immomo.momo" value="100101" LaunchBoost="1176"/>
+    <package name="com.alibaba.mobileim" value="1"/>
+    <package name="com.taobao.qianniu" value="1"/>
+    <package name="com.whatsapp" value="1"/>
+    <package name="com.sdu.didi.psnger" value="1101" LaunchBoost="2500"/>
+    <package name="com.sdu.didi.gsui" value="1"/>
+    <package name="com.funcity.taxi.passenger" value="1"/>
+    <package name="com.funcity.taxi.driver" value="1"/>
+    <package name="com.ubercab" value="1"/>
+    <package name="com.ubercab.driver" value="1"/>
+    <package name="com.baidu.BaiduMap" value="1101" LaunchBoost="1000"/>
+    <package name="com.autonavi.xmgd.navigator" value="1"/>
+    <package name="com.autonavi.minimap" value="1000000000000000000000001101" LaunchBoost="770"/>
+    <package name="com.qiyi.video" value="1000000000000000000001001101" LaunchBoost="1200"/>
+    <package name="com.youku.phone" value="1000000000000000000000001101" LaunchBoost="2100"/>
+    <package name="com.baidu.video" value="1"/>
+    <package name="com.storm.smart" value="1101" LaunchBoost="2500"/>
+    <package name="com.tencent.qqlive" value="1000000000001000000000001101" LaunchBoost="1000"/>
+    <package name="com.sohu.sohuvideo" value="101" LaunchBoost="2300"/>
+    <package name="com.qihoo.video" value="1"/>
+    <package name="com.letv.android.client" value="101" LaunchBoost="2000"/>
+    <package name="tv.pps.mobile" value="1"/>
+    <package name="com.pplive.androidphone" value="1"/>
+    <package name="com.hunantv.imgo.activity" value="101" LaunchBoost="3000"/>
+    <package name="tv.danmaku.bili" value="1000000000000000000000001101" LaunchBoost="808"/>
+    <package name="tv.acfundanmaku.video" value="1"/>
+    <package name="com.xunlei.downloadprovider" value="1101" LaunchBoost="2100"/>
+    <package name="com.kugou.android" value="1000000000000000000000001101" LaunchBoost="1500"/>
+    <package name="com.tencent.qqmusic" value="1000000000000000000000001101" LaunchBoost="1200"/>
+    <package name="cn.kuwo.player" value="1000000000000000000000001101" LaunchBoost="1400"/>
+    <package name="com.netease.cloudmusic" value="1000000000000000000000001101" LaunchBoost="3226"/>
+    <package name="fm.xiami.main" value="101" LaunchBoost="2300"/>
+    <package name="com.ting.mp3.android" value="1"/>
+    <package name="com.tencent.mtt" value="1000000000000000000000001101" LaunchBoost="1000"/>
+    <package name="com.UCMobile" value="1000000000000000000000001111" LaunchBoost="1200"/>
+    <package name="com.ijinshan.browser_fast" value="1"/>
+    <package name="sogou.mobile.explorer" value="1"/>
+    <package name="com.android.chrome" value="1"/>
+    <package name="com.baidu.browser.apps" value="1"/>
+    <package name="com.baidu.searchbox" value="1000000000000000000000000101" LaunchBoost="602"/>
+    <package name="com.oupeng.mini.android" value="1"/>
+    <package name="com.jingdong.app.mall" value="1000000000000000000000001110" LaunchBoost="933"/>
+    <package name="com.MobileTicket" value="110" LaunchBoost="5200"/>
+    <package name="com.suning.mobile.ebuy" value="10"/>
+    <package name="com.youdao.dict" value="110" LaunchBoost="3300"/>
+    <package name="com.youdao.dict.smartisan" value="110" LaunchBoost="3300"/>
+    <package name="com.eg.android.AlipayGphone" value="1100000000000000000000001100" LaunchBoost="458"/>
+    <package name="com.taobao.taobao" value="1000000000000000000000001100" LaunchBoost="1145"/>
+    <package name="com.sina.weibo" value="1000000000000000000000101101" LaunchBoost="1000"/>
+    <package name="com.ss.android.article.news" value="1000000000010000000000001100" LaunchBoost="770"/>
+    <package name="com.sankuai.meituan" value="1000000000000000000000001100" LaunchBoost="991"/>
+    <package name="com.ximalaya.ting.android" value="1000000000000000000000001100" LaunchBoost="1400"/>
+    <package name="com.tencent.news" value="10000000000001100" LaunchBoost="2300"/>
+    <package name="com.mobike.mobikeapp" value="1100" LaunchBoost="2500"/>
+    <package name="com.smile.gifmaker" value="1000000000000000000000001100" LaunchBoost="1575"/>
+    <package name="com.dianping.v1" value="1100" LaunchBoost="1806"/>
+    <package name="ctrip.android.view" value="1100" LaunchBoost="1451"/>
+    <package name="com.mt.mtxx.mtxx" value="1100" LaunchBoost="5100"/>
+    <package name="com.hexin.plat.android" value="1100" LaunchBoost="1400"/>
+    <package name="com.wuba" value="1100" LaunchBoost="1500"/>
+    <package name="com.tencent.qqpim" value="1100" LaunchBoost="2142"/>
+    <package name="cmb.pb" value="1100" LaunchBoost="2597"/>
+    <package name="com.zhihu.android" value="1100" LaunchBoost="2000"/>
+    <package name="cn.wps.moffice_eng" value="1100" LaunchBoost="1000"/>
+    <package name="air.tv.douyu.android" value="1000000000000000000000001100" LaunchBoost="4000"/>
+    <package name="com.happyelements.AndroidAnimal" value="100000000000100" LaunchBoost="4880"/>
+    <package name="com.tencent.tmgp.sgame" value="1000000000000100000000001100" LaunchBoost="14671" StartingWindow="preview"/>
+    <package name="com.netease.onmyoji.wdj" value="1100" LaunchBoost="5600" StartingWindow="preview"/>
+    <package name="com.tmall.wireless" value="1100" LaunchBoost="811"/>
+    <package name="com.baidu.netdisk" value="1100" LaunchBoost="1500"/>
+    <package name="com.taobao.idlefish" value="1000000000000000000000001100" LaunchBoost="2100"/>
+    <package name="com.cubic.autohome" value="1100" LaunchBoost="2800"/>
+    <package name="com.netease.newsreader.activity" value="10000000000000100" LaunchBoost="1100"/>
+    <package name="com.qqgame.hlddz" value="100000000001100" LaunchBoost="9777" StartingWindow="preview"/>
+    <package name="so.ofo.labofo" value="1100" LaunchBoost="3400"/>
+    <package name="com.shuqi.controller" value="1100" LaunchBoost="2600"/>
+    <package name="com.tencent.android.qqdownloader" value="1000000000000000000000000100" LaunchBoost="505"/>
+    <package name="com.snda.wifilocating" value="1100" LaunchBoost="1000"/>
+    <package name="com.tencent.androidqqmail" value="1100" LaunchBoost="1553"/>
+    <package name="com.chinamworld.main" value="1100" LaunchBoost="5100"/>
+    <package name="com.achievo.vipshop" value="100" LaunchBoost="1746"/>
+    <package name="com.icbc" value="1100" LaunchBoost="2831"/>
+    <package name="com.qzone" value="1100" LaunchBoost="1900"/>
+    <package name="com.sankuai.meituan.takeoutnew" value="1000000000000000000000000100" LaunchBoost="905"/>
+    <package name="com.qq.reader" value="1100" LaunchBoost="1300"/>
+    <package name="com.xunmeng.pinduoduo" value="1000000000000000000000000100" LaunchBoost="723"/>
+    <package name="com.ss.android.article.video" value="100" LaunchBoost="705"/>
+    <package name="com.p1.mobile.putong" value="100" LaunchBoost="1039"/>
+    <package name="com.tencent.tmgp.speedmobile" value="100000000000100" LaunchBoost="10000"/>
+    <package name="com.tencent.tmgp.pubgmhd" value="1000000000000100000000000100" LaunchBoost="17911"/>
+    <package name="com.tencent.tmgp.pubgm" value="100000000000100" LaunchBoost="10000"/>
+    <package name="com.tencent.tmgp.qqx5" value="100000000000100" LaunchBoost="5500"/>
+    <package name="com.panda.videoliveplatform" value="1000"/>
+    <package name="android.zhibo8" value="1000"/>
+    <package name="com.hupu.games" value="1000"/>
+    <package name="com.baidu.lbs.waimai" value="1000"/>
+    <package name="com.youdao.note" value="1000"/>
+    <package name="com.codoon.gps" value="1000"/>
+    <package name="com.liulishuo.engzo" value="1000"/>
+    <package name="com.ganji.android" value="1000"/>
+    <package name="com.ruguoapp.jike" value="1000"/>
+    <package name="com.netease.hyxd" value="1000" StartingWindow="preview"/>
+    <package name="com.google.android.marvin.talkback" value="10000" BgControl="100"/>
+    <package name="com.iflytek.speechsuite" value="110000" BgControl="100"/>
+    <package name="com.dianming.phoneapp" value="110000" BgControl="100"/>
+    <package name="com.bjbyhd.voiceback" value="110000" BgControl="100"/>
+    <package name="com.smartisanos.music" value="10000000000000000000000100000"/>
+    <package name="com.android.packageinstaller" value="100000"/>
+    <package name="com.android.browser" value="10000000000000000000000100000"/>
+    <package name="com.smartisanos.bug2go" value="100000"/>
+    <package name="com.smartisanos.smartfolder.aoa" value="100000"/>
+    <package name="com.warrenryan.onestepback" value="100000"/>
+    <package name="com.ludashi.benchmark" value="1000000000000"/>
+    <package name="com.smartisan.ostest" value="110000" BgControl="100" />
+    <package name="com.smartisan.ostest.test" value="110000" BgControl="100" />
+
+    <!--PEROPT_PACKAGE_NEED_FORCE_UPDATE_APP_CONFIG = 1 << 15  -->
+
+    <!-- PEROPT_PACKAGE_FORCE_STOP_SURFACEVIEW    = 1 << 16  -->
+    <package name="com.ss.android.ugc.live" value="10000000000000000"/>
+    <package name="com.ss.android.ugc.aweme" value="1000000000010000000000000000"/>
+
+    <package name="com.tudou.android" value="1"/>
+    <package name="com.smartisanos.screenrecorder" value="10000000000000000000"/>
+    <package name="com.smartisanos.textboom" value="10000000000000000000"/>
+    <package name="com.smartisanos.recorder" value="100000000000000000000"/>
+    <package name="com.android.phone" value="100000000000000000000"/>
+    <package name="com.smartisanos.notes" value="10000000100000000000000000000"/>
+    <package name="com.android.inputmethod.latin" value="10000000000000000000000"/>
+    <package name="com.smartisanos.ime" value="10000000000000000000000"/>
+    <package name="com.iflytek.inputmethod.smartisan" value="10000000000000000000000"/>
+    <package name="com.sohu.inputmethod.sogou.chuizi" value="10000000000000000000000"/>
+    <package name="com.baoruan.launcher" value="100000000000000000000000"/>
+    <package name="com.baoruan.launcher2" value="100000000000000000000000"/>
+    <package name="com.netease.cloudmusic" value="1001000000000000000000000000"/>
+    <package name="com.bullet.messenger" value="100000000"/>
+
+    <package name="com.tencent.tmgp.cf" value="100000000000000"/>
+    <package name="com.tencent.tmgp.WePop" value="100000000000000"/>
+    <package name="com.ss.android.lark" value="100000000010000000000000001"/>
+    <package name="com.bytedance.seal" value="100000000000000000000000000"/>
+    <package name="us.zoom.videomeetings" value="100000000000000000000000000"/>
+    <!-- PEROPT_FLAG_PERFORMANCE_TOOL = 1 << 17 -->
+    <package name="com.antutu.ABenchMark" value="1000100000000000000000" UidGroupID="1" tooltype="3"/>
+    <package name="com.antutu.benchmark.full" value="1000100000000000000000" UidGroupID="1" tooltype="3"/>
+    <package name="com.glbenchmark.glbenchmark27" value="100000000000000000" tooltype="1"/>
+    <package name="com.primatelabs.geekbench" value="100000000000000000" tooltype="1"/>
+    <package name="com.futuremark.dmandroid.application" value="100000000000000000" tooltype="1"/>
+    <package name="com.ludashi.benchmark" value="100000000000000000" tooltype="1"/>
+    <package name="com.andromeda.androbench2" value="100000000000000000" tooltype="2"/>
+    <package name="net.kishonti.gfxbench.gl" value="100000000000000000" tooltype="1"/>
+    <package name="com.eembc.andebench" value="100000000000000000" tooltype="1"/>
+    <package name="com.ludashi.benchmark2" value="100000000000000000" tooltype="1"/>
+    <package name="com.ludashi.aibench" value="100000000000000000" tooltype="1"/>
+    <!-- PEROPT_FLAG_FORCESTOP_RESTART = 1 << 18 -->
+    <package name="com.qihoo.appstore" value="1000000000000000000"/>
+    <package name="com.sixsix.call" value="10000000000000000000"/>
+    <!-- PEROPT_FLAG_DISABLE_DROP_FAILED_TOAST = 1 << 28 -->
+    <package name="com.smartisanos.sidebar" value="10000000000000000000000000000"/>
+    <package name="com.smartisanos.desktop" value="10000000000000000000000000000"/>
+    <package name="com.android.gallery3d" value="10000000000000000000000000000"/>
+    <package name="com.smartisanos.filemanager" value="10000000000000000000000000000"/>
+    <package name="com.android.email" value="10000000000000000000000000000"/>
+    <package name="com.android.calendar" value="10000000000000000000000000000"/>
+    <package name="com.yozo.sts.office" value="10000000000000000000000000000"/>
+    <package name="com.smartisanos.ideapills" value="10000000000000000000000000000"/>
+
+    <package name="com.smt.uiautomator" value="100000000000000000000000000"/>
+    <package name="com.smt.uiautomator.test" value="100000000000000000000000000"/>
+
+
+</config>

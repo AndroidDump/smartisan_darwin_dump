@@ -1,0 +1,38 @@
+on property:smt.zygote.crash=true
+    setprop smt.zygote.crash false
+    mkdir /data/rescue 0775 system system
+    start rescueparty_monitor
+
+on property:sys.boot_completed=1
+    mkdir /data/rescue 0775 system system
+    start rescueparty_complete
+
+on property:smt.rescue.backup=true
+    mkdir /data/rescue 0775 system system
+    setprop smt.rescue.backup false
+    start rescueparty_backup
+
+on property:smt.rescue.start=true
+    mkdir /data/rescue 0775 system system
+    setprop service.bootanim.exit 1
+    start rescueparty_start
+
+service rescueparty_monitor /system/bin/rescueparty monitor
+    disabled
+    oneshot
+
+service rescueparty_complete /system/bin/rescueparty complete
+    user system
+    group system
+    disabled
+    oneshot
+    
+service rescueparty_backup /system/bin/rescueparty backup
+    user system
+    group system
+    disabled
+    oneshot
+
+service rescueparty_start /system/bin/rescueparty start
+    disabled
+    oneshot

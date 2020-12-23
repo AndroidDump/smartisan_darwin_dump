@@ -1,0 +1,2 @@
+2 3 576000 710400 1000000000 30000000000 166666666 2
+//minupgradelevel downMaxBalanceTime litminfreq bigminfreq analysisinterval tempclosetime quickinterval FineTuningScale

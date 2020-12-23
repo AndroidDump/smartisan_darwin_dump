@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<config version="1">
+    <!--ctrip.android.view start-->
+    <PreDexFile name="ctrip.android.view" secondDir="files" type="1" outDir=""/>
+    <!--ctrip.android.view end-->
+</config>

@@ -1,0 +1,2 @@
+#!/system/bin/sh
+cat /d/tzdbg/qsee_log > /data/misc/logd/qsee_log

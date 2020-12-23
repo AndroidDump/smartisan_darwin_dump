@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<config version="3">
+    <activity name="com.baidu.netdisk.p2p.OnePixelActivity" value="1"/>
+    <activity name="com.p1.mobile.putong.api.push.keep.OnePixelActivity" value="1"/>
+    <activity name="com.daemon.sdk.core.activity.KeepLiveActivity" value="1"/>
+    <activity name="com.ss.android.message.sswo.SswoActivity" value="1"/>
+    <activity name="com.speed.shadowsocks.ui.option.KeepLiveActivity" value="1"/>
+    <activity name="com.tencent.news.push.alive.offactivity.HollowActivity" value="1"/>
+    <activity name="com.youloft.core.report.OnePixActivity" value="1"/>
+    <activity name="com.water.richprocess.KeepAliveActivity" value="1"/>
+    <activity name="com.alibaba.sdk.android.push.keeplive.PushExtActivity" value="1"/>
+    <activity name="com.igexin.sdk.GActivity" value="1"/>
+    <activity name="com.ofo.ofopush.activity.DaemonActivity" value="1"/>
+    <activity name="com.taou.maimai.backend.MaimaiPushActivity" value="1"/>
+    <activity name="com.mobike.mobikeapp.push.OppoAndVivoPushImproveReceiveActivity" value="1"/>
+    <activity name="com.ss.android.push.sswo.SswoActivity" value="1"/>
+    <activity name="com.paic.mo.client.commons.keeplive.onepx.OnePxActivity" value="1"/>
+    <activity name="com.sixsix.call/com.fanjun.keeplive.activity.OnePixelActivity" value="1"/>
+    <activity name="com.tencent.mobileqq/.activity.QQLSActivity" value="10"/>
+    <activity name="com.vlocker.locker/com.vlocker.settings.DismissActivity" value="10"/>
+    <activity name="com.jifen.qukan/.lockpop.LockReadActivity" value="10"/>
+    <activity name="com.kingsoft/.activitys.LockScreenActivity" value="10"/>
+    <activity name="com.tencent.mobileqq/com.tencent.av.ui.VideoInviteLock" value="100"/>
+    <activity name="com.tencent.mobileqq/com.tencent.av.ui.AVActivity" value="100"/>
+    <activity name="com.tencent.mobileqq/com.tencent.av.ui.VideoInviteActivity" value="100"/>
+    <activity name="com.tencent.mobileqqi/com.tencent.av.ui.VideoInviteLock" value="100"/>
+    <activity name="com.tencent.mobileqqi/com.tencent.av.ui.AVActivity" value="100"/>
+    <activity name="com.tencent.mm/.plugin.voip.ui.VideoActivity" value="100"/>
+    <activity name="com.alibaba.android.rimet/com.alibaba.android.teleconf.activities.TeleConfWaitingActivity" value="100"/>
+    <activity name="com.alibaba.android.rimet/com.alibaba.android.teleconf.activities.TeleVideoConfRunningActivity" value="100"/>
+    <activity name="com.tencent.wework/.multitalk.controller.VoipCallActivity" value="100"/>
+    <activity name="com.cootek.smartdialer/.voip.c2c.VoipOutgoingActivity" value="100"/>
+    <activity name="com.bullet.messenger/com.netease.nim.avchatkit.activity.AVChatActivity" value="100"/>
+    <activity name="com.jinyinliao/com.netease.nim.avchatkit.activity.AVChatActivity" value="100"/>
+    <activity name="com.bullet.messenger/com.bullet.messenger.avchatkit.activity.AVChatActivity" value="100"/>
+    <activity name="com.jinyinliao/com.bullet.messenger.avchatkit.activity.AVChatActivity" value="100"/>
+
+    <activity name="com.netease.newsreader.activity/com.netease.newsreader.support.push.gt.PushGTActivity" value="10000"/>
+    <activity name="com.netease.newsreader.activity/com.netease.newsreader.support.push.gt.GTNewPushActivity" value="10000"/>
+    <activity name="com.sina.news/.module.push.guard.activity.SinaDynmActivity" value="10000"/>
+    <activity name="com.sina.news/.module.push.guard.activity.SinaGTDynAActivity" value="10000"/>
+    <activity name="com.bankcomm.Bankcomm/com.bankcomm.push.OppoAdvancePushActivity" value="10000"/>
+    <activity name="com.sina.sinablog/com.sdk.plus.EnhActivity" value="10000"/>
+    <activity name="com.jxedt/com.bj58.android.pushlib.GTActivity" value="10000"/>
+    <activity name="com.bankcomm.Bankcomm/com.bankcomm.push.OppoAdvancePushActivity" value="10000"/>
+    <activity name="com.sina.sinablog/com.sdk.plus.EnhActivity" value="10000"/>
+    <activity name="com.sina.sinablog/.push.getui.InvokeActivity" value="10000"/>
+    <activity name="com.jxedt/com.bj58.android.pushlib.GTActivity" value="10000"/>
+    <activity name="com.ximalaya.ting.android/com.sdk.plus.EnhActivity" value="10000"/>
+    <activity name="com.ximalaya.ting.android/.host.wake.InvokeActivity" value="10000"/>
+    <activity name="com.snda.lantern.wifilocating/com.sdk.plus.EnhActivity" value="10000"/>
+    <activity name="com.ijinshan.browser_fast/com.sdk.plus.EnhActivity" value="10000"/>
+    <activity name="com.cleanmaster.security_cn/com.sdk.plus.EnhActivity" value="10000"/>
+    <activity name="com.duowan.gamevoice/com.yy.pushsvc.impl.KeepAliveActivity" value="10000"/>
+    <activity name="com.duowan.mobile/com.yy.pushsvc.impl.KeepAliveActivity" value="10000"/>
+    <activity name="com.duowan.mobile/com.yy.pushsvc.keeplive.activity.KeepAliveActivity" value="10000"/>
+    <activity name="cn.goapk.market/.AnZhiGeTuiActivity" value="10000"/>
+    <activity name="com.jiongji.andriod.card/com.baicizhan.framework.push.getui.GeTuiOvRandomActivity" value="10000"/>
+    <activity name="com.wuba.zhuanzhuan/.push.getui.GTPushActivity" value="10000"/>
+    <activity name="com.jianshu.haruki/com.baiji.jianshu.ui.push.getui.GeTuiPushOVActivity" value="10000"/>
+    <activity name="com.taou.maimai/.push.MaimaiPushActivity" value="10000"/>
+    <activity name="com.hunantv.imgo.activity/.getui.GetUiDynamicActivity" value="10000"/>
+    <activity name="com.baidu.haokan/.getui.GtvoActivity" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.magic.TaurusActivity" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.magic.GeminiActivity" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.magic.LeoActivity" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.magic.AriesActivity" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.magic.CancerActivity" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.legend.Aestivate" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.legend.Apricity" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.legend.Ephemeral" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.legend.Nefelibata" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.legend.Phosphene" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.assist.KaraEnhActivity" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.myth.Mars" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.myth.Apollo" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.myth.Diana" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.myth.Minerva" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.myth.Venus" value="10000"/>
+    <activity name="com.tencent.karaoke/.maindex.assist.KaraAssistV2Activity" value="10000"/>
+    <activity name="com.tencent.qqpimsecure/com.tencent.ep.booster.QuickBooster" value="10000"/>
+    <activity name="com.tencent.qqpimsecure/com.tencent.server.fore.QuickLoadActivity" value="10000"/>
+    <activity name="com.snda.lantern.wifilocating/com.lantern.launcher.wakeup.qbm" value="10000"/>
+    <activity name="com.snda.lantern.wifilocating/com.lantern.launcher.wakeup.ovd" value="10000"/>
+    <activity name="com.snda.lantern.wifilocating/com.lantern.launcher.wakeup.cbd" value="10000"/>
+    <activity name="com.snda.lantern.wifilocating/com.lantern.launcher.wakeup.bom" value="10000"/>
+    <activity name="com.snda.lantern.wifilocating/com.lantern.launcher.wakeup.adh" value="10000"/>
+    <activity name="com.snda.lantern.wifilocating/com.lantern.launcher.wakeup.WkInvokeActivity" value="10000"/>
+    <activity name="com.snda.lantern.wifilocating/com.lantern.launcher.ui.EmptyActivity" value="10000"/>
+    <activity name="com.snda.wifilocating/com.lantern.launcher.ui.EmptyActivity" value="10000"/>
+    <activity name="com.snda.wifilocating/com.lantern.launcher.wakeup.bom" value="10000"/>
+    <activity name="com.tencent.android.qqdownloader/com.live.push.PushActivity" value="10000"/>
+    <activity name="com.youku.phone/.ActivateYoukuActivity" value="10000"/>
+    <activity name="com.moji.mjweather/com.moji.callup.activity.QuickLoadActivity" value="10000"/>
+    <activity name="com.moji.mjweather/com.moji.push.MJPushDynamicActivity" value="10000"/>
+    <activity name="cn.kuwo.player/cn.kuwo.mod.push.getui.KGuardActivity" value="10000"/>
+    <activity name="air.tv.douyu.android/com.douyu.push.platform.DyGTDynamicActivity" value="10000"/>
+    <activity name="com.xunmeng.pinduoduo/com.igexin.sdk.MActivity" value="10000"/>
+    <activity name="com.sina.news/.module.push.guard.activity.SinaGTDynBActivity" value="10000"/>
+    <activity name="com.jm.video/com.jm.android.jmpush.keepalive.GeTuiAliveActivity" value="10000"/>
+    <activity name="com.igexin.sdk.GActivity" value="10000"/>
+    <activity name="com.sdk.plus.EnhActivity" value="10000"/>
+
+
+
+    <activity name="com.tencent.mm/.plugin.sns.ui.SnsGalleryUI" value="1000000"/>
+    <activity name="com.tencent.mm/.plugin.sns.ui.SnsBrowseUI" value="1000000"/>
+
+    <!-- SMFLAG_ACTIVITY_DISABLE_GESTURE           = 1 << 8  -->
+    <activity name="com.smartisanos.awemeplugin/.MainActivity" value="100000000"/>
+    <!-- SMFLAG_ACTIVITY_DISABLE_MENU              = 1 << 9 -->
+    <!-- SMFLAG_ACTIVITY_REPLACE_HOME_WITH_BACK    = 1 << 10 -->
+    <activity name="smartisanos/.app.ResolverActivity" value="11000000000"/>
+    <activity name="com.smartisanos.ideapills/.remind.RemindAlarmSettingActivity" value="11000000000"/>
+    <activity name="smartisanos/.app.DoppelgangerChooseActivity" value="11000000000"/>
+    <activity name="com.smartisanos.launcher/.ConfirmPasswordActivity" value="11000000000"/>
+    <activity name="com.android.incallui/.InCallScreen" value="11000000000"/>
+    <activity name="com.smartisanos.sara/.bubble.BubbleActivity" value="11000000000"/>
+    <!-- SMFLAG_ACTIVITY_DISABLE_BOTTOM_BACK       = 1 << 11 -->
+    <activity name="com.tencent.mobileqq/.activity.history.ChatHistoryActivity" value="100000000000"/>
+    <activity name="com.tencent.mobileqq/.gallery.view.AIOGalleryActivity" value="100000000000"/>
+    <activity name="com.tencent.mobileqq/cooperation.qzone.video.QzoneVerticalVideoGpuProxyActivity" value="100000000000"/>
+    <activity name="com.lemon.lv/com.vega.main.edit.EditActivity" value="100000000000"/>
+    <activity name="com.kuaishou.nebula/com.yxcorp.gifshow.HomeActivity" value="1100000000000"/>
+    <activity name="com.kuaishou.nebula/com.yxcorp.gifshow.detail.PhotoDetailActivity" value="100000000000"/>
+    <activity name="photo.editor.polarr/co.polarr.polarrphotoeditor.EditorActivity" value="100000000000"/>
+    <activity name="com.pinguo.edit.sdk/us.pinguo.mix.modules.beauty.BeautyActivity" value="100000000000"/>
+    <activity name="com.pinguo.edit.sdk/us.pinguo.mix.modules.localedit.LocalEditActivity" value="100000000000"/>
+    <activity name="com.pinguo.edit.sdk/us.pinguo.mix.modules.watermark.WatermarkActivity" value="100000000000"/>
+    <activity name="com.by.butter.camera/.activity.EditActivity" value="100000000000"/>
+    <activity name="com.taobao.taobao/com.taobao.taolive.room.TaoLiveVideoActivity" value="100000000000"/>
+    <activity name="com.hengye.share/.module.media.MediaPlayerActivity" value="100000000000"/>
+    <activity name="com.yuedong.sport/.run.outer.RunningActivity" value="100000000000"/>
+    <activity name="com.android.gallery3d/.app.MovieActivity" value="100000000000"/>
+    <activity name="com.adobe.lrmobile/.material.loupe.LoupePhoneActivity" value="100000000000"/>
+    <activity name="com.adobe.psmobile/.PSXEditActivity" value="100000000000"/>
+    <activity name="com.tencent.karaoke/com.tencent.tme.record.preview.RecordPreviewActivity" value="100000000000"/>
+    <!-- SMFLAG_ACTIVITY_DISABLE_LEFT_BACK         = 1 << 12 -->
+    <activity name="com.tencent.mm/.plugin.brandservice.ui.timeline.preload.ui.TmplWebViewTooLMpUI" value="1000000000000"/>
+    <activity name="com.tencent.mm/.plugin.webview.ui.tools.WebviewMpUI" value="1000000000000"/>
+    <activity name="com.tencent.mm/.plugin.brandservice.ui.timeline.video.BizVideoDetailUI" value="1000000000000"/>
+    <activity name="com.weico.international/.activity.MainFragmentActivity" value="1000000000000"/>
+    <activity name="com.hengye.share/.Launcher" value="1000000000000"/>
+    <activity name="tv.danmaku.bili/.MainActivityV2" value="1000000000000"/>
+    <activity name="com.netease.cloudmusic/.activity.MainActivity" value="1000000000000"/>
+    <activity name="com.ss.android.lark/.main.app.MainActivity" value="1000000000000"/>
+    <activity name="com.smartisanos.textboom/.BoomActivity" value="1000000000000"/>
+    <activity name="com.adobe.lrmobile/.material.collections.neworganize.NewCollectionsOrganizeActivity" value="1000000000000"/>
+    <activity name="com.adobe.psmobile/.MainActivity" value="1000000000000"/>
+    <!-- SMFLAG_ACTIVITY_DISABLE_LEFT_BACK         = 1 << 12 -->
+    <!-- SMFLAG_ACTIVITY_DISABLE_RIGHT_BACK        = 1 << 13 -->
+    <activity name="com.smartisanos.virtualremoter/.ui.activities.ControlActivity" value="11000000000000"/>
+    <activity name="com.happyelements.AndroidAnimal/com.happyelements.hellolua.MainActivity" value="11000000000000"/>
+    <activity name="com.android.gallery3d/.photoeditor.PhotoEditor3" value="11000000000000"/>
+    <activity name="com.android.gallery3d/.photoeditor.PhotoEditor2" value="11000000000000"/>
+    <activity name="smartisanos/.crossdisplay.TaskCrossMirrorContainerActivity" value="11000000000000"/>
+
+    <activity name="com.tencent.qqmusic/.business.lockscreennew.LockScreenActivity" value="10"/>
+ </config>

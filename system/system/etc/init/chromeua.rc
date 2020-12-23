@@ -1,0 +1,8 @@
+on property:vendor.smt.chrome.ua.changed=true
+    start chromeua_start
+
+service chromeua_start /system/bin/chromeua
+    user shell
+    group shell
+    disabled
+    oneshot

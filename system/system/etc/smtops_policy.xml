@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<appops-policy version="1">
+    <user mode="invalid"/>
+    <system mode="allowed"/>
+
+    <application>
+    <!-- Example:
+
+        <pkg name="com.android.dialer" type="system-app">
+            <op name="android:call_phone" mode="ask"/>
+        </pkg>
+
+    -->
+        <pkg name="cn.com.fetion"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.aol.mobile.aim"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.baidu.tieba"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.duowan.mobile"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.facebook.orca"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.google.android.apps.blogger"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.google.android.apps.plus"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.hootsuite.droid.full"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.instagram.android"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.joelapenna.foursquared"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.myspace.android"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.path"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.pica.msn"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.pinterest"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.qzone"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.renren.mobile.android"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.skype.rover"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.WBlog"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tumblr"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.twitter.android"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.viber.voip"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.weico.sinaweibo"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.xiaomi.channel"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.yahoo.mobile.client.android.im"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.zhihu.android"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="co.vine.android"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="im.yixin"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="jp.naver.line.android"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="me.imid.fuubo"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="me.papa"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+        </pkg>
+        <pkg name="com.android.server.telecom"  mode="allowed">
+            <op name="notify_screen_on" mode="ignored"/>
+            <op name="notify_top" mode="ignored"/>
+            <op name="notify_led" mode="allowed"/>
+        </pkg>
+        <pkg name="com.android.mms"  mode="allowed">
+            <op name="notify_top" mode="ignored"/>
+            <op name="notify_led" mode="allowed"/>
+        </pkg>
+        <!-- IM -->
+        <pkg name="com.tencent.mm"  mode="invalid">
+            <op name="boot_completed" mode="allowed"/>
+            <op name="notify_top" mode="allowed"/>
+            <op name="third_party_bootable" mode="allowed"/>
+            <op name="show_on_keyguard" mode="allowed"/>
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.mobileqq"  mode="invalid">
+            <op name="boot_completed" mode="allowed"/>
+            <op name="notify_top" mode="allowed"/>
+            <op name="third_party_bootable" mode="allowed"/>
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.mobileqqi"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+            <op name="boot_completed" mode="allowed"/>
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.qq" mode="invalid">
+            <op name="boot_completed" mode="allowed"/>
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.qqlite" mode="invalid">
+            <op name="boot_completed" mode="allowed"/>
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.alibaba.android.rimet" mode="invalid">
+            <op name="boot_completed" mode="invalid"/>
+            <op name="third_party_bootable" mode="invalid"/>
+            <op name="show_on_keyguard" mode="allowed"/>
+            <op name="start_on_background" mode="allowed"/>
+
+        </pkg>
+        <pkg name="com.alibaba.mobileim"  mode="invalid">
+            <op name="notify_top" mode="allowed"/>
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.taobao.qianniu" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.whatsapp"  mode="invalid">
+            <op name="boot_completed" mode="invalid"/>
+            <op name="notify_top" mode="allowed"/>
+            <op name="third_party_bootable" mode="invalid"/>
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <!-- Alarm Clock -->
+        <pkg name="com.zdworks.android.zdclock" mode="invalid">
+            <op name="boot_completed" mode="allowed"/>
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <!-- GMS -->
+        <pkg name="com.google.android.syncadapters.calendar" mode="invalid">
+            <op name="boot_completed" mode="allowed"/>
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.google.android.syncadapters.contacts" mode="invalid">
+            <op name="boot_completed" mode="allowed"/>
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.smartisan.drivekit" mode="invalid">
+            <op name="boot_completed" mode="allowed"/>
+        </pkg>
+        <pkg name="com.smartisan.bbs"  mode="invalid">
+            <op name="boot_completed" mode="invalid"/>
+            <op name="third_party_bootable" mode="invalid"/>
+        </pkg>
+        <pkg name="com.smartisan.reader"  mode="invalid">
+            <op name="boot_completed" mode="invalid"/>
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.ss.android.lark"  mode="invalid">
+            <op name="boot_completed" mode="allowed"/>
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.eg.android.AlipayGphone" mode="invalid">
+            <op name="boot_completed" mode="allowed"/>
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+
+        <!--keyguard op apps-->
+        <pkg name="com.lovebizhi.wallpaper" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.vlocker.locker" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.sdu.didi.psnger" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.zuimeia.suite.lockscreen" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.xiaomi.channel" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.immomo.momo" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.cootek.smartdialer" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.pb" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.wework" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.yx" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="jp.naver.line.android" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.eim" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.tim" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="kik.android" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.kakao.talk" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.youdao.dict" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.jiongji.andriod.card" mode="invalid">
+            <op name="show_on_keyguard" mode="allowed"/>
+        </pkg>
+        <pkg name="com.sina.weibo" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.netease.cloudmusic" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.qqmusic" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.taobao.idlefish" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.kugou.android" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.kugou.android" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.androidqqmail" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="air.tv.douyu.android" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.jd.jrapp" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.moji.mjweather" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.duowan.kiwi" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="fm.xiami.main" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.ss.android.article.lite" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.ct.client" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.sohu.inputmethod.sogou" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.baidu.haokan" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.xiachufang" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="fm.qingting.qtradio" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="android.zhibo8" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.dangdang.buy2" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.iflytek.inputmethod" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.miui.calculator" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.kingpoint.gmcchh" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.one.tomato" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.lietou.mishu" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.liulishuo.engzo" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.qihoo.loan" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.sdu.didi.gsui" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.qgame" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.nfyg.hsbb" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.biyao.fu" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="cn.caocaokeji.user" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.zhangdan.app" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.lanjingren.ivwen" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.baidu.input" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.android.qichacha" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.wandafilm.app" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.reading" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.alpha.lagouapk" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="cn.danatech.xingseapp" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.zcbl.bjjj_driving" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.xtc.watch" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.huodao.hdphone" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="one.hh.oneclient" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.android.icredit" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.tencent.qqlive" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.qiyi.video" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.xiaomi.smarthome" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.baidu.BaiduMap" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.lesschat" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="cmb.pb" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.sam.instagramdownloader" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <pkg name="com.kongming.android.h.parentt" mode="invalid">
+            <op name="start_on_background" mode="allowed"/>
+        </pkg>
+        <!--google services-->
+        <pkg name="com.google.android.gsf.login" mode="invalid">
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.google.android.gsf" mode="invalid">
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.google.android.gms" mode="invalid">
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.google.android.syncadapters.calendar" mode="invalid">
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.google.android.syncadapters.contacts" mode="invalid">
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+        <pkg name="com.google.android.gsf.gservices" mode="invalid">
+            <op name="third_party_bootable" mode="allowed"/>
+        </pkg>
+    </application>
+</appops-policy>

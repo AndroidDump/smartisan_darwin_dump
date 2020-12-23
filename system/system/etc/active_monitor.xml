@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<packages>
+    <pkg name="com.sankuai.meituan"/>
+    <pkg name="com.dianping.v1"/>
+    <pkg name="ctrip.android.view"/>
+    <pkg name="com.achievo.vipshop"/>
+    <pkg name="com.qq.reader"/>
+    <pkg name="com.netease.newsreader.activity"/>
+    <pkg name="com.jiemian.news"/>
+    <pkg name="com.youku.phone"/>
+    <pkg name="com.autonavi.minimap"/>
+    <pkg name="com.douban.frodo"/>
+    <pkg name="com.ximalaya.ting.android"/>
+    <pkg name="cn.dxy.android.aspirin"/>
+    <pkg name="com.immomo.momo"/>
+    <pkg name="com.sina.weibo"/>
+    <pkg name="com.sand.airdroid"/>
+    <pkg name="cn.wps.moffice_eng"/>
+    <pkg name="com.youdao.dict"/>
+    <pkg name="org.idaxiang.android"/>
+    <pkg name="com.smartisan.bbs"/>
+</packages>

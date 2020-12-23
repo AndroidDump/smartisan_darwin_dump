@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<packages>
+   <package name="com.smartisanos.appstore">
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.gamestore">
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.magicflow">
+        <item name="android.permission.ACCESS_FINE_LOCATION" />
+        <item name="android.permission.ACCESS_COARSE_LOCATION" />
+        <item name="android.permission.CALL_PHONE" />
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.READ_CONTACTS" />
+        <item name="android.permission.READ_CALENDAR" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.music">
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.android.calendar">
+        <item name="android.permission.CALL_PHONE" />
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.READ_CALENDAR" />
+        <item name="android.permission.WRITE_CALENDAR" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.smartfolder.aoa">
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.clock">
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.calculator">
+    </package>
+    <package name="com.smartisanos.recorder">
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.RECORD_AUDIO" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.weather">
+        <item name="android.permission.READ_PHONE_STATE" />
+    </package>
+    <package name="com.smartisanos.notes">
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <item name="android.permission.CALL_PHONE" />
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.GET_ACCOUNTS" />
+    </package>
+    <package name="com.smartisanos.writer">
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <item name="android.permission.CALL_PHONE" />
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.GET_ACCOUNTS" />
+    </package>
+    <package name="com.android.camera2">
+        <item name="android.permission.CAMERA" />
+        <item name="android.permission.RECORD_AUDIO" />
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.screenrecorder">
+        <item name="android.permission.READ_PHONE_STATE" />
+	<item name="android.permission.READ_EXTERNAL_STORAGE" />
+	<item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.handinhand">
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.RECORD_AUDIO" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisan.filemanager">
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.ime">
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.compass">
+        <item name="android.permission.ACCESS_FINE_LOCATION" />
+        <item name="android.permission.ACCESS_COARSE_LOCATION" />
+    </package>
+    <package name="com.android.contacts">
+        <item name="android.permission.READ_SMS" />
+    </package>
+    <package name="com.smartisanos.hearingaid">
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.RECORD_AUDIO" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.android.gallery3d">
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <item name="android.permission.GET_ACCOUNTS" />
+    </package>
+    <package name="com.smartisanos.cloudsync">
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_CONTACTS" />
+        <item name="android.permission.READ_CONTACTS" />
+        <item name="android.permission.WRITE_CALENDAR" />
+        <item name="android.permission.READ_CALENDAR" />
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.GET_ACCOUNTS" />
+        <item name="android.permission.READ_SMS" />
+        <item name="android.permission.SEND_SMS"/>
+        <item name="android.permission.ACCESS_FINE_LOCATION"/>
+        <item name="android.permission.ACCESS_COARSE_LOCATION"/>
+    </package>
+    <package name="com.smartisanos.cloudsyncshare">
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <item name="android.permission.READ_PHONE_STATE" />
+    </package>
+    <package name="com.smartisanos.cloudagent">
+        <item name="android.permission.READ_PHONE_STATE" />
+    </package>
+    <package name="com.smartisan.smpush">
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <item name="android.permission.SEND_SMS" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.android.browser">
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    </package>
+    <package name="com.smartisanos.wallet">
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+        <item name="android.permission.READ_PHONE_STATE" />
+        <item name="android.permission.ACCESS_FINE_LOCATION" />
+        <item name="android.permission.ACCESS_COARSE_LOCATION" />
+        <item name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    </package>
+    <package name="com.smartisanos.filemanagerservice">
+        <item name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <item name="android.permission.READ_EXTERNAL_STORAGE" />
+    </package>
+</packages>

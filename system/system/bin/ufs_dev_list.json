@@ -1,0 +1,25 @@
+{
+  "DevInfoArray": [
+    {
+      "Vendor": "SKhynix",
+      "Model": "HN8T15BZGKX016",
+      "Rev": "A002",
+      "FFU_FLAG": 1,
+      "FwPath": "/system/etc/ufsffu/FW_SKhynix_UFS3.1_A002_USER.bin",
+      "OldRev": [
+          "A001"
+      ]
+    },
+    {
+      "Vendor": "SKhynix",
+      "Model": "HN8T05BZGKX015",
+      "Rev": "A002",
+      "FFU_FLAG": 1,
+      "FwPath": "/system/etc/ufsffu/FW_SKhynix_UFS3.1_A002_USER.bin",
+      "OldRev": [
+          "A001"
+      ]
+    }
+  ]
+}
+

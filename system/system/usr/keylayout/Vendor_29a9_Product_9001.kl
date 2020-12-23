@@ -1,0 +1,23 @@
+key 87   SEARCH
+key 88   NETWORK_SEARCH
+key 99   LOCAL_SEARCH
+key 70   IDEAR_PILLS_CREATOR
+key 119   IM
+key 107   ALBUM
+key 111   FILE_MANAGER
+key 104  TEXT
+key 102   IDEAR_PILLS
+key 110   SCREENSHOT
+
+# screen button
+key 105   SCREEN_LEFTBUTTON
+key 106   SCREEN_RIGHTBUTTON
+key 108   SCREEN_SWITCHBUTTON
+
+# add keyevent for tnt screen on/off state
+key usage 0x70051   TNT_SCREEN_OFF
+key usage 0x70052   TNT_SCREEN_ON
+
+key 114   VOLUME_DOWN
+key 115   VOLUME_UP
+key 164   MEDIA_PLAY_PAUSE
