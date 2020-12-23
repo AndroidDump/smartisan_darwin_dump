@@ -1,0 +1,5 @@
+service preinstalld /vendor/bin/init.preinstall.sh
+    class late_start
+    user root
+    group root shell system cache
+    oneshot

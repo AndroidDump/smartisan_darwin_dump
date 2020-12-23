@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<project name="darwin">
+    <algo name="detect" desc="hdr detect">
+        <campitable>
+            <string name="min">1.0.5</string>
+            <string name="max">1.0.5</string>
+        </campitable>
+        <sensor name="wide" desc="main/wide camera sensor">
+            <group name="detect_param" desc="detect parameters">
+                <float name="gain_threshold" desc="gain threshold">6</float>
+                <float name="gain_large_threshold" desc="gain large threshold">40</float>
+                <double name="low_intercepts" desc="low intercepts">-5</double>
+                <double name="high_intercepts" desc="high intercepts">-10</double>
+                <bool name="isSaveMode" desc="save mode?">true</bool>
+                <int name="patch_num" desc="patch num">16</int>
+                <float name="ghost_threshold" desc="ghost threshold">0.5</float>
+                <float name="total_threshold" desc="total threshold">0.4</float>
+            </group>
+        </sensor>
+        <sensor name="front" desc="front camera sensor">
+            <group name="detect_param" desc="detect parameters">
+                <float name="gain_threshold" desc="gain threshold">2.5</float>
+                <float name="gain_large_threshold" desc="gain large threshold">40</float>
+                <double name="low_intercepts" desc="low intercepts">-5</double>
+                <double name="high_intercepts" desc="high intercepts">-10</double>
+                <bool name="isSaveMode" desc="save mode?">true</bool>
+                <int name="patch_num" desc="patch num">16</int>
+                <float name="ghost_threshold" desc="ghost threshold">0.5</float>
+                <float name="total_threshold" desc="total threshold">0.4</float>
+            </group>
+        </sensor>
+        <sensor name="tele" desc="tele camera sensor">
+            <group name="detect_param" desc="detect parameters">
+                <float name="gain_threshold" desc="gain threshold">4.2</float>
+                <float name="gain_large_threshold" desc="gain large threshold">40</float>
+                <double name="low_intercepts" desc="low intercepts">-5</double>
+                <double name="high_intercepts" desc="high intercepts">-10</double>
+                <bool name="isSaveMode" desc="save mode?">true</bool>
+                <int name="patch_num" desc="patch num">16</int>
+                <float name="ghost_threshold" desc="ghost threshold">0.5</float>
+                <float name="total_threshold" desc="total threshold">0.4</float>
+            </group>
+        </sensor>
+        <sensor name="extra wide" desc="extra wide camera sensor">
+            <group name="detect_param" desc="detect parameters">
+                <float name="gain_threshold" desc="gain threshold">4.2</float>
+                <float name="gain_large_threshold" desc="gain large threshold">40</float>
+                <double name="low_intercepts" desc="low intercepts">-5</double>
+                <double name="high_intercepts" desc="high intercepts">-10</double>
+                <bool name="isSaveMode" desc="save mode?">true</bool>
+                <int name="patch_num" desc="patch num">16</int>
+                <float name="ghost_threshold" desc="ghost threshold">0.5</float>
+                <float name="total_threshold" desc="total threshold">0.4</float>
+            </group>
+        </sensor>
+    </algo>
+    <algo name="rawhdr" desc="raw hdr">
+        <campitable>
+            <string name="min">1.0.5</string>
+            <string name="max">1.0.5</string>
+        </campitable>
+        <sensor name="wide" desc="main/wide camera sensor">
+            <group name="global" desc="global parameters">
+                <bool name="ltm_on" default="true" desc="">true</bool>
+                <bool name="align_deghost" default="true" desc="">true</bool>
+                <bool name="ev0_mode" default="false" desc="">false</bool>
+                <bool name="demosaic" default="false" desc="">false</bool>
+                <bool name="awb_on" default="true" desc="">true</bool>
+                <bool name="lsc_on" default="true" desc="">true</bool>
+                <bool name="align_on" default="true" desc="">true</bool>
+                <bool name="deghost_on" default="true" desc="">true</bool>
+                <bool name="chromatix_on" default="true" desc="">true</bool>
+            </group>
+            <group name="awb_param" desc="AWB parameters">
+                <string name="source" desc="">dng</string>
+                <string name="comment" desc="">source, from dng or meta</string>
+            </group>
+            <group name="denoise_param" desc="denoise parameters">
+                <subgroup name="day" desc="for day denoise">
+                    <float name="y_denoise_2" desc="ev-2 denoise strength">10.0</float>
+                    <float name="y_denoise_4" desc="ev-4 denoise strength">20.0</float>
+                    <float name="uv_denoise_2" desc="brightness denoise strength">20.0</float>
+                    <float name="uv_denoise_4" desc="chroma denoise strength">25.0</float>
+                </subgroup>
+                <subgroup name="night" desc="for night denoise">
+                    <float name="y_denoise_2" desc="ev-2 denoise strength">10.0</float>
+                    <float name="y_denoise_4" desc="ev-4 denoise strength">30.0</float>
+                    <float name="uv_denoise_2" desc="brightness denoise strength">20.0</float>
+                    <float name="uv_denoise_4" desc="chroma denoise strength">25.0</float>
+                </subgroup>
+            </group>
+            <group name="mfnr_param" desc="mfnr parameters">
+                <float name="temporal_denoise_strength" desc="temporal denoise strength">2.0</float>
+                <float name="spatial_denoise_strength" desc="spatial denoise strength">0.0</float>
+            </group>
+            <group name="ltm_param" desc="Local Tonemapping parameters">
+                <int name="night_lux" default="300" min="300" max="128" desc="">300</int>
+                <subgroup name="super_dark" desc="">
+                    <int name="thr" default="32" min="1" max="64" desc="">32</int>
+                    <int name="gain" default="2" min="1" max="32" desc="">2</int>
+                </subgroup>
+                <subgroup name="normal" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="day_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="night_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="night_no_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+            </group>
+        </sensor>
+        <sensor name="front" desc="front camera sensor">
+            <group name="global" desc="global parameters">
+                <bool name="ltm_on" default="true" desc="">true</bool>
+                <bool name="align_deghost" default="true" desc="">true</bool>
+                <bool name="ev0_mode" default="false" desc="">false</bool>
+                <bool name="demosaic" default="false" desc="">false</bool>
+                <bool name="awb_on" default="true" desc="">true</bool>
+                <bool name="lsc_on" default="true" desc="">true</bool>
+                <bool name="align_on" default="true" desc="">true</bool>
+                <bool name="deghost_on" default="true" desc="">true</bool>
+                <bool name="chromatix_on" default="true" desc="">true</bool>
+            </group>
+            <group name="awb_param" desc="AWB parameters">
+                <string name="source" desc="">dng</string>
+                <string name="comment" desc="">source, from dng or meta</string>
+            </group>
+            <group name="denoise_param" desc="denoise parameters">
+                <subgroup name="day" desc="for day denoise">
+                    <float name="y_denoise_2" desc="ev-2 denoise strength">1.0</float>
+                    <float name="y_denoise_4" desc="ev-4 denoise strength">3.0</float>
+                    <float name="uv_denoise_2" desc="brightness denoise strength">20.0</float>
+                    <float name="uv_denoise_4" desc="chroma denoise strength">25.0</float>
+                </subgroup>
+                <subgroup name="night" desc="for night denoise">
+                    <float name="y_denoise_2" desc="ev-2 denoise strength">2.0</float>
+                    <float name="y_denoise_4" desc="ev-4 denoise strength">15.0</float>
+                    <float name="uv_denoise_2" desc="brightness denoise strength">20.0</float>
+                    <float name="uv_denoise_4" desc="chroma denoise strength">25.0</float>
+                </subgroup>
+            </group>
+            <group name="mfnr_param" desc="mfnr parameters">
+                <float name="temporal_denoise_strength_" desc="temporal denoise strength">2.0</float>
+                <float name="spatial_denoise_strength" desc="spatial denoise strength">0.0</float>
+            </group>
+            <group name="ltm_param" desc="Local Tonemapping parameters">
+                <int name="night_lux" default="300" min="300" max="128" desc="">300</int>
+                <subgroup name="super_dark" desc="">
+                    <int name="thr" default="32" min="1" max="64" desc="">32</int>
+                    <int name="gain" default="2" min="1" max="32" desc="">2</int>
+                </subgroup>
+                <subgroup name="normal" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.5</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="day_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.5</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="night_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.5</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="night_no_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.5</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+            </group>
+        </sensor>
+        <sensor name="tele" desc="tele camera sensor">
+            <group name="global" desc="global parameters">
+                <bool name="ltm_on" default="true" desc="">true</bool>
+                <bool name="align_deghost" default="true" desc="">true</bool>
+                <bool name="ev0_mode" default="false" desc="">false</bool>
+                <bool name="demosaic" default="false" desc="">false</bool>
+                <bool name="awb_on" default="true" desc="">true</bool>
+                <bool name="lsc_on" default="true" desc="">true</bool>
+                <bool name="align_on" default="true" desc="">true</bool>
+                <bool name="deghost_on" default="true" desc="">true</bool>
+                <bool name="chromatix_on" default="true" desc="">true</bool>
+            </group>
+            <group name="awb_param" desc="AWB parameters">
+                <string name="source" desc="">dng</string>
+                <string name="comment" desc="">source, from dng or meta</string>
+            </group>
+            <group name="denoise_param" desc="denoise parameters">
+                <subgroup name="day" desc="for day denoise">
+                    <float name="y_denoise_2" desc="ev-2 denoise strength">10.0</float>
+                    <float name="y_denoise_4" desc="ev-4 denoise strength">20.0</float>
+                    <float name="uv_denoise_2" desc="brightness denoise strength">20.0</float>
+                    <float name="uv_denoise_4" desc="chroma denoise strength">25.0</float>
+                </subgroup>
+                <subgroup name="night" desc="for night denoise">
+                    <float name="y_denoise_2" desc="ev-2 denoise strength">10.0</float>
+                    <float name="y_denoise_4" desc="ev-4 denoise strength">30.0</float>
+                    <float name="uv_denoise_2" desc="brightness denoise strength">20.0</float>
+                    <float name="uv_denoise_4" desc="chroma denoise strength">25.0</float>
+                </subgroup>
+            </group>
+            <group name="mfnr_param" desc="mfnr parameters">
+                <float name="temporal_denoise_strength" desc="temporal denoise strength">2.0</float>
+                <float name="spatial_denoise_strength" desc="spatial denoise strength">0.0</float>
+            </group>
+            <group name="ltm_param" desc="Local Tonemapping parameters">
+                <int name="night_lux" default="300" min="300" max="128" desc="">300</int>
+                <subgroup name="super_dark" desc="">
+                    <int name="thr" default="32" min="1" max="64" desc="">32</int>
+                    <int name="gain" default="2" min="1" max="32" desc="">2</int>
+                </subgroup>
+                <subgroup name="normal" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="day_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="night_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="night_no_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+            </group>
+        </sensor>
+        <sensor name="extra wide" desc="extra wide camera sensor">
+            <group name="global" desc="global parameters">
+                <bool name="ltm_on" default="true" desc="">true</bool>
+                <bool name="align_deghost" default="true" desc="">true</bool>
+                <bool name="ev0_mode" default="false" desc="">false</bool>
+                <bool name="demosaic" default="false" desc="">false</bool>
+                <bool name="awb_on" default="true" desc="">true</bool>
+                <bool name="lsc_on" default="true" desc="">true</bool>
+                <bool name="align_on" default="true" desc="">true</bool>
+                <bool name="deghost_on" default="true" desc="">true</bool>
+                <bool name="chromatix_on" default="true" desc="">true</bool>
+            </group>
+            <group name="awb_param" desc="AWB parameters">
+                <string name="source" desc="">dng</string>
+                <string name="comment" desc="">source, from dng or meta</string>
+            </group>
+            <group name="denoise_param" desc="denoise parameters">
+                <subgroup name="day" desc="for day denoise">
+                    <float name="y_denoise_2" desc="ev-2 denoise strength">10.0</float>
+                    <float name="y_denoise_4" desc="ev-4 denoise strength">20.0</float>
+                    <float name="uv_denoise_2" desc="brightness denoise strength">20.0</float>
+                    <float name="uv_denoise_4" desc="chroma denoise strength">25.0</float>
+                </subgroup>
+                <subgroup name="night" desc="for night denoise">
+                    <float name="y_denoise_2" desc="ev-2 denoise strength">10.0</float>
+                    <float name="y_denoise_4" desc="ev-4 denoise strength">30.0</float>
+                    <float name="uv_denoise_2" desc="brightness denoise strength">20.0</float>
+                    <float name="uv_denoise_4" desc="chroma denoise strength">25.0</float>
+                </subgroup>
+            </group>
+            <group name="mfnr_param" desc="mfnr parameters">
+                <float name="temporal_denoise_strength" desc="temporal denoise strength">2.0</float>
+                <float name="spatial_denoise_strength" desc="spatial denoise strength">0.0</float>
+            </group>
+            <group name="ltm_param" desc="Local Tonemapping parameters">
+                <int name="night_lux" default="300" min="300" max="128" desc="">300</int>
+                <subgroup name="super_dark" desc="">
+                    <int name="thr" default="32" min="1" max="64" desc="">32</int>
+                    <int name="gain" default="2" min="1" max="32" desc="">2</int>
+                </subgroup>
+                <subgroup name="normal" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="day_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="night_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+                <subgroup name="night_no_face" desc="">
+                    <float name="shadow" default="0.9" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="highlight" default="0.2" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="sigma" default="1.7" min="0.0" max="2.0" desc="">0.91</float>
+                    <float name="mid" default="0.1" min="0.0" max="1.0" desc="">0.2</float>
+                    <float name="low_dr_thr" default="1.0" desc="">1023.0</float>
+                    <float name="thr1" default="2000.0"  desc="">2000.0</float>
+                    <float name="thr2" default="4000.0" desc="">4000.0</float>
+                    <float name="thr3" default="8000.0" desc="">8000.0</float>
+                    <float name="contrast1" default="1.0"  desc="">1.2</float>
+                    <float name="contrast2" default="1.3"  desc="">1.4</float>
+                    <float name="contrast3" default="1.4"  desc="">1.4</float>
+                    <float name="contrast4" default="1.4"  desc="">1.6</float>
+                    <float name="black_level_coef1" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef2" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef3" default="0.6"  desc="">0.9</float>
+                    <float name="black_level_coef4" default="0.6"  desc="">1.0</float>
+                </subgroup>
+            </group>
+        </sensor>
+    </algo>
+</project>

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<project name="darwin">
+    <algo name="post_process" desc="MFSR post-processing">
+        <campitable>
+            <string name="min">1.1.0</string>
+            <string name="max">1.1.1</string>
+        </campitable>
+        <sensor name="wide" desc="main/wide camera sensor">
+            <group name="post_process_param" desc="MFSR post-processing parameters">
+                <float name="gain0" default="1.0" min="0.0" desc="">2.5</float>
+                <float name="gain1" default="1.0" min="0.0" desc="">2.0</float>
+                <float name="gain2" default="1.0" min="0.0" desc="">1.5</float>
+                <float name="gain3" default="1.0" min="0.0" desc="">1.1</float>
+                <int name="min_detail_th" default="2" min="0" max="255" desc="">2</int>
+                <int name="max_detail_th" default="30" min="0" max="255" desc="">30</int>
+                <int name="filter_radius0" default="3" min="1" desc="">3</int>
+                <int name="filter_radius1" default="3" min="1" desc="">4</int>
+                <int name="filter_radius2" default="3" min="1" desc="">5</int>
+                <int name="filter_radius3" default="3" min="1" desc="">6</int>
+                <float name="sigma" default="0.1" min="0.0" desc="">0.2</float>
+                <int name="iso_th" default="1600" min="0" desc="">10000</int>
+                <bool name="uv_smooth" default="true" desc="">True</bool>
+                <bool name="suppress" default="false" desc="">false</bool>
+                <subgroup name="manual_100" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_200" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_400" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_600" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_800" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_1000" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_1200" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_1400" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_1600" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_2600" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_3200" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_4400" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_6600" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_9000" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_10000" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+            </group>
+        </sensor>
+        <sensor name="tele" desc="tele camera sensor">
+            <group name="post_process_param" desc="MFSR post-processing parameters">
+                <float name="gain0" default="1.0" min="0.0" desc="">1.6</float>
+                <float name="gain1" default="1.0" min="0.0" desc="">1.28</float>
+                <float name="gain2" default="1.0" min="0.0" desc="">1.04</float>
+                <float name="gain3" default="1.0" min="0.0" desc="">0.8</float>
+                <int name="min_detail_th" default="2" min="0" max="255" desc="">2</int>
+                <int name="max_detail_th" default="30" min="0" max="255" desc="">30</int>
+                <int name="filter_radius0" default="3" min="1" desc="">3</int>
+                <int name="filter_radius1" default="3" min="1" desc="">4</int>
+                <int name="filter_radius2" default="3" min="1" desc="">5</int>
+                <int name="filter_radius3" default="3" min="1" desc="">6</int>
+                <float name="sigma" default="0.1" min="0.0" desc="">0.2</float>
+                <int name="iso_th" default="1600" min="0" desc="">10000</int>
+                <bool name="uv_smooth" default="true" desc="">True</bool>
+                <bool name="suppress" default="false" desc="">False</bool>
+                <subgroup name="manual_100" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_200" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_400" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_800" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_1600" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_3200" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_5000" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_6400" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+                <subgroup name="manual_10000" desc="">
+                    <float name="manual_gain" default="1.0" min="0" max="10" desc="">1.0</float>
+                    <int name="manual_min_th" default="0" min="-10" max="10" desc="">0</int>
+                </subgroup>
+            </group>
+        </sensor>
+    </algo>
+</project>

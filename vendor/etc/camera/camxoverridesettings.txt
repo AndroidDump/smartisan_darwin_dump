@@ -1,0 +1,27 @@
+logInfoMask=0
+logConfigMask=0
+logVerboseMask=0
+logWarningMask=0x00000080
+logRequestMapping=0
+overrideLogLevels=0x01
+systemLogEnable=true
+
+#disable preview ubwc
+outputFormat=OutputFormatYUV420NV12
+validateTFParams=TRUE
+multiCameraEnable=TRUE
+multiCameraHWSyncMask=0x1
+enableRawHDR=1
+pdafHWEnable=FALSE
+exposeFullSizeForQCFA=FALSE
+enableTOFInterface=TRUE
+customTOFSensorLib=/vendor/lib64/sensors.hal.tof.so
+AECGainThresholdForQCFA=4.0
+multiCameraFrameSync=0x01
+enableSensorFpsMatch=TRUE
+mwEnable=1
+FDPreprocessing=GTM
+numberOfCHIThreads=14
+FDFilterEngine=0
+maxHalRequests=7
+FDConfigSource=2

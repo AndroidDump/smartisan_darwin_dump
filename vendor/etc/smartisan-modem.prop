@@ -1,0 +1,43 @@
+#NEW-STONE_BEGIN (CCM4006: Create modem own property file)
+#2017-12-26 cuipengfei: create modem property file. M0215476
+#2019-06-04 hubin: Porting the feature. M0340729.
+
+#
+# smartisan modem property
+#
+
+# NEW-STONE_BEGIN (CCM5008:RIL CLIR RETURN)
+# 2017-09-13 hubin:added. M0205084
+# 2018-04-04 cuipengfei: Porting the feature. M0239967.
+persist.vendor.radio.facnotsup_as_nonw=1
+# NEW-STONE_END (CCM5008:RIL CLIR RETURN)
+
+#NEW-STONE_BEGIN (CCM2004:CDMA SMS sent over TCH)
+#2017-04-12 liulu:create the feature M204949
+persist.vendor.radio.force_on_dc=true
+#NEW-STONE_END (CCM2004:CDMA SMS sent over TCH)
+
+# NEW-STONE_BEGIN (CCM5019:Enable modem save power property)
+# 2017-12-27 liulu:enable the property M0213013
+# 2018-04-04 cuipengfei: Porting the feature. M0239985.
+persist.vendor.radio.add_power_save=1
+# NEW-STONE_END (CCM5019:Enable modem save power property)
+
+# NEW-STONE_BEGIN (CCM2008: Set property ignore_dom_time)
+# 2018-04-28 zhengjunyan: set ignore_dom_time as 5 sec
+persist.vendor.radio.ignore_dom_time=5
+# NEW-STONE_END (CCM2008: Set property ignore_dom_time)
+
+
+#NEW-STONE_BEGIN (CCM2016:FAKE BASE STATION DETECTION)
+# 2017-06-27 wangyun:create the feature M0170767
+# Fake Base Station Detection M0170767
+persist.vendor.radio.bar_fake_gcell=true
+# NEW-STONE_END (CCM2016:FAKE BASE STATION DETECTION)
+
+#NEW-STONE_BEGIN:(CCM4046: forced asdiv config when DP connected)
+#2020-07-30 nieyufeng :forced asdiv config when DP connected. M0423336.
+persist.vendor.radio.dp.bands=47,48,80,81,83,120,121,122,123,126,153,157,158,159,160,182,184
+#NEW-STONE_END:(CCM4046: forced asdiv config when DP connected)
+
+#NEW-STONE_END (CCM4006: Create modem own property file)

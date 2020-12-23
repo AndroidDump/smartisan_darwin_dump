@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<project name="darwin">
+    <algo name="mfsr" desc="multi-frame super resolution">
+        <campitable>
+            <string name="min">1.1.0</string>
+            <string name="max">1.1.1</string>
+        </campitable>
+        <!-- Main parameters -->
+        <sensor name="wide" desc="main/wide camera sensor">
+            <group name="mfsr_param" desc="mfsr parameters">
+                <float name="h" default="0.18" min="0.0" desc="">0.18</float>
+                <bool name="_coe4FlatDenoise" default="False" desc="">False</bool>
+                <bool name="bRunYUVFilter" default="True" desc="">True</bool>
+                <float name="beta" default="1.8" min="0.0" desc="">1.8</float>
+                <float name="_highlight_min_th" default="50" min="30" max="100" desc="">40</float>
+                <float name="_highlight_max_th" default="80" min="_highlight_min_th" max="150" desc="">70</float>
+                <float name="_noise_model_gain" default="1.0" min="0" desc="">1.0</float>
+                <float name="_cs_th_small" default="18.5" min="0" desc="">20</float>
+                <float name="_cs_th_large" default="20.5" min="0" desc="">22</float>
+                <float name="lambda1" default="0.07" min="0" desc="">0.007</float>
+                <float name="lambda2" default="0.07" min="0" desc="">0.0005</float>
+                <float name="alpha" default="0.1" min="0" desc="">0.25</float>
+                <float name="t" default="0.12" min="0" desc="">0.12</float>
+                <float name="s1" default="0.0" min="0" desc="">0.0</float>
+                <float name="s2" default="1.0" min="0" desc="">1.0</float>
+                <float name="M_th" default="0.5" min="0" desc="">0.5</float>
+                <bool name="bAdaptiveAlign" default="True" min="0" desc="">True</bool>
+                <float name="denseMaskH" default="0.5" min="0" desc="">0.35</float>
+                <float name="denseRatioTh" default="0.04" min="0" desc="">0.04</float>
+                <float name="denseIsoTh" default="400.0" min="100.0" desc="">400.0</float>
+                <float name="th_s1_small" default="4" min="0" desc="">4</float>
+                <float name="th_s1_large" default="6" min="0" desc="">6</float>
+                <float name="th_s2_small" default="0.1" min="0" desc="">0.1</float>
+                <float name="th_s2_large" default="0.5" min="0" desc="">0.5</float>
+                <float name="th_detail_area_scale" default="3" min="0" desc="">3</float>
+                <int name="robust_average" default="1" desc="">1</int>
+                <float name="cardTh" default="0.65" min="0" desc="">0.65</float>
+                <float name="robustHomoTh" default="0.1" min="0" desc="">0.1</float>
+                <float name="robustZeroTh" default="0.05" min="0" desc="">0.05</float>
+                <float name="h_gain" default="2.0" min="0" desc="">2.5</float>
+                <float name="drc_th" default="2.2" min="0" desc="">2.0</float>
+                <bool name="bRunUVMedianFilter" default="False" desc="">False</bool>
+                <int name="medianRadius" default="6" min="1" desc="">6</int>
+                <int name="medianStep" default="3" min="1" desc="">3</int>
+                <bool name="bEnableFaceBlur" default="False" desc="">True</bool>
+                <float name="faceMaskHValue" default="0.38" min="0.1" desc="">0.38</float>
+                <float name="faceMaskGFSigma" default="0.1" min="0.1" desc="">0.1</float>
+                <float name="faceMaskGFDetailGain" default="1" min="0" desc="">1</float>
+                <float name="minSensorScaleForBGRBlur" default="1.5" min="1" desc="">3.33</float>
+                <float name="robustMaskThWithFace" default="20.0" min="1" desc="">20.0</float>
+                <float name="robustMaskThNoFace" default="10.0" min="1" desc="">12.0</float>
+                <float name="robustMaskZeroRatio" default="0.5" min="0.26" desc="">0.5</float>
+            </group>
+        </sensor>
+        <!-- Tele parameters -->
+        <sensor name="tele" desc="tele camera sensor">
+            <group name="mfsr_param" desc="mfsr parameters">
+                <float name="h" default="0.18" min="0.0" desc="">0.18</float>
+                <bool name="_coe4FlatDenoise" default="False" desc="">False</bool>
+                <bool name="bRunYUVFilter" default="True" desc="">True</bool>
+                <float name="beta" default="1.8" min="0.0" desc="">1.8</float>
+                <float name="_highlight_min_th" default="50" min="30" max="100" desc="">40</float>
+                <float name="_highlight_max_th" default="80" min="_highlight_min_th" max="150" desc="">80</float>
+                <float name="_noise_model_gain" default="1.0" min="0" desc="">1.0</float>
+                <float name="_cs_th_small" default="18.5" min="0" desc="">20</float>
+                <float name="_cs_th_large" default="20.5" min="0" desc="">22</float>
+                <float name="lambda1" default="0.07" min="0" desc="">0.007</float>
+                <float name="lambda2" default="0.07" min="0" desc="">0.0005</float>
+                <float name="alpha" default="0.1" min="0" desc="">0.24</float>
+                <float name="t" default="0.12" min="0" desc="">0.12</float>
+                <float name="s1" default="0.0" min="0" desc="">0.0</float>
+                <float name="s2" default="1.0" min="0" desc="">1.0</float>
+                <float name="M_th" default="0.5" min="0" desc="">0.5</float>
+                <bool name="bAdaptiveAlign" default="True" min="0" desc="">True</bool>
+                <float name="denseMaskH" default="0.5" min="0" desc="">0.35</float>
+                <float name="denseRatioTh" default="0.04" min="0" desc="">0.04</float>
+                <float name="denseIsoTh" default="400.0" min="100.0" desc="">400.0</float>
+                <float name="th_s1_small" default="4" min="0" desc="">2.5</float>
+                <float name="th_s1_large" default="6" min="0" desc="">4.5</float>
+                <float name="th_s2_small" default="0.1" min="0" desc="">0.1</float>
+                <float name="th_s2_large" default="0.5" min="0" desc="">0.2</float>
+                <float name="th_detail_area_scale" default="3" min="0" desc="">3</float>
+                <int name="robust_average" default="1" desc="">1</int>
+                <float name="cardTh" default="0.65" min="0" desc="">0.65</float>
+                <float name="robustHomoTh" default="0.1" min="0" desc="">0.1</float>
+                <float name="robustZeroTh" default="0.05" min="0" desc="">0.07</float>
+                <float name="h_gain" default="2.0" min="0" desc="">2.0</float>
+                <float name="drc_th" default="2.2" min="0" desc="">2.2</float>
+                <bool name="bRunUVMedianFilter" default="False" desc="">False</bool>
+                <int name="medianRadius" default="6" min="1" desc="">6</int>
+                <int name="medianStep" default="3" min="1" desc="">3</int>
+                <bool name="bEnableFaceBlur" default="False" desc="">False</bool>
+                <float name="faceMaskHValue" default="0.38" min="0.1" desc="">0.38</float>
+                <float name="faceMaskGFSigma" default="0.1" min="0.1" desc="">0.1</float>
+                <float name="faceMaskGFDetailGain" default="1" min="0" desc="">1</float>
+                <float name="minSensorScaleForBGRBlur" default="1.5" min="1" desc="">2.0</float>
+                <float name="robustMaskThWithFace" default="20.0" min="1" desc="">3.0</float>
+                <float name="robustMaskThNoFace" default="10.0" min="1" desc="">2.0</float>
+                <float name="robustMaskZeroRatio" default="0.5" min="0.26" desc="">0.5</float>
+            </group>
+        </sensor>        
+    </algo>
+</project>
